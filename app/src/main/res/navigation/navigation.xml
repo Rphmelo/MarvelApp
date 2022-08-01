@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/characterFragment"
+    >
+
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.rphmelo.marvelapp.CharacterFragment"
+        android:label="CharacterFragment"/>
+
+    <fragment
+        android:id="@+id/registerCharacterFragment"
+        android:name="com.rphmelo.marvelapp.RegisterCharacterFragment"
+        android:label="CharacterDetailFragment">
+        <action
+            android:id="@+id/action_registerCharacterFragment_to_characterFragment"
+            app:destination="@id/characterFragment"
+            app:popUpTo="@id/registerCharacterFragment"/>
+    </fragment>
+
+</navigation>
